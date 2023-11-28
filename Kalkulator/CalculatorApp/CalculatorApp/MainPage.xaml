@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.MainPage">
+    <Grid Padding="16" RowSpacing="5" ColumnSpacing="5"
+          RowDefinitions="2*,*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*">
+        <Label x:Name="CurrentCalculation"
+               FontSize="22"
+               LineBreakMode="NoWrap"
+               Grid.ColumnSpan="4"
+               Text=""
+               TextColor="{StaticResource White}"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="Start"
+               Grid.Row="0"/>
+        <Label x:Name="resultText"
+               FontSize="64" FontAttributes="Bold" Text="0"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="End"
+               TextColor="{StaticResource White}"
+               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+        <BoxView BackgroundColor="{StaticResource Gray900}" HeightRequest="1"
+                 Grid.Row="0" VerticalOptions="End"
+                 Grid.ColumnSpan="4"
+                 />
+        <Button Text="C" Grid.Row="1" Grid.Column="0"
+               Clicked="OnClear" BackgroundColor="Gray" CornerRadius="1000" />
+        <Button Text="+/-" Grid.Row="1" Grid.Column="1"
+               Clicked="OnNegative" BackgroundColor="Gray" CornerRadius="1000"/>
+        <Button Text="%" Grid.Row="1" Grid.Column="2"
+               Clicked="OnPercentage" BackgroundColor="Gray" CornerRadius="1000"/>
+        <Button Text="7" Grid.Row="2" Grid.Column="0"
+               Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="8" Grid.Row="2" Grid.Column="1"
+               Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="9" Grid.Row="2" Grid.Column="2"
+               Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="4" Grid.Row="3" Grid.Column="0"
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="5" Grid.Row="3" Grid.Column="1"
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="6" Grid.Row="3" Grid.Column="2"
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="1" Grid.Row="4" Grid.Column="0"
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="2" Grid.Row="4" Grid.Column="1"
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="3" Grid.Row="4" Grid.Column="2"
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="00" Grid.Row="5" Grid.Column="0" 
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="0" Grid.Row="5" Grid.Column="1" 
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="." Grid.Row="5" Grid.Column="2" 
+              Clicked="OnSelectNumber" BackgroundColor="GhostWhite" CornerRadius="1000"/>
+        <Button Text="÷" Grid.Row="1" Grid.Column="3"
+               Clicked="OnSelectOperator" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="×" Grid.Row="2" Grid.Column="3"
+               Clicked="OnSelectOperator" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="-" Grid.Row="3" Grid.Column="3"
+               Clicked="OnSelectOperator" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="+" Grid.Row="4" Grid.Column="3"
+               Clicked="OnSelectOperator" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="=" Grid.Row="5" Grid.Column="3" 
+               Clicked="OnCalculate" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="sin" Grid.Row="6" Grid.Column="0" 
+                Clicked="OnTrigFunction" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="cos" Grid.Row="6" Grid.Column="1" 
+                Clicked="OnTrigFunction" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="tan" Grid.Row="6" Grid.Column="2" 
+                Clicked="OnTrigFunction" BackgroundColor="Orange" CornerRadius="1000"/>
+        <Button Text="Log" Grid.Row="6" Grid.Column="3" 
+                Clicked="OnLogarithm" BackgroundColor="Orange" CornerRadius="1000"/>
+    </Grid>
+
+</ContentPage>

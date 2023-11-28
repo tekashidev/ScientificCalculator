@@ -1,0 +1,1 @@
+F:\SzymonBajor\Calculator\Kalkulator\CalculatorApp\CalculatorApp\CalculatorApp.csproj;x64
